@@ -1,4 +1,4 @@
-package com.uped.proyecto;
+package com.uped.proyecto.modelo;
 
 
 public class Empleado extends Persona {
@@ -9,11 +9,8 @@ public class Empleado extends Persona {
         this.salario = salario;
     }
 
-    public void actualizarNombre(String nuevoNombre) {
-        this.nombre = nuevoNombre;
-    }
-
-    public double getSalario() {
-        return salario;
+    @Override
+    public double calcularBeneficioAnual() {
+        return salario * 0.10; // 10% de bono
     }
 }

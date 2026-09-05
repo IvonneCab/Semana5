@@ -1,4 +1,4 @@
-package com.uped.proyecto;
+package com.uped.proyecto.modelo;
 
 public class Docente extends Persona{
     private String especialidad;
@@ -10,12 +10,9 @@ public class Docente extends Persona{
         this.añosExperiencia = añosExperiencia;
     }
 
-    public void impartirClase(String materia) {
-        System.out.println(nombre + " imparte: " + materia);
+    @Override
+    public double calcularBeneficioAnual() {
+        return añosExperiencia * 45.0; // Bono por antigüedad
     }
 
-    @Override
-    public String toString() {
-        return presentarse() + " | " + especialidad + " (" + añosExperiencia + " años)";
-    }
 }

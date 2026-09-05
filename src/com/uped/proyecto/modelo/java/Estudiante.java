@@ -1,23 +1,21 @@
 
-package com.uped.proyecto;
+package com.uped.proyecto.modelo;
 
 public class Estudiante  extends Persona {
 
     private String carnet;
     private String carrera;
+    private double promedio;
 
-    public Estudiante(String nombre, String dui, String carnet, String carrera) {
+    public Estudiante(String nombre, String dui, String carnet, String carrera,double promedio) {
         super(nombre, dui);
         this.carnet = carnet;
         this.carrera = carrera;
-    }
-
-    public void matricular(String materia) {
-        System.out.println(carnet + " matriculo: " + materia);
+        this.promedio = promedio;
     }
 
     @Override
-    public String toString() {
-        return presentarse() + " | " + carrera + " (" + carnet + ")";
+    public double calcularBeneficioAnual() {
+        return promedio >= 8.5 ? 500.0 : 0.0; // Beca de $500 si el promedio >= 8.5
     }
 }

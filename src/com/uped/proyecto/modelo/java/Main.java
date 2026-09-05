@@ -1,4 +1,4 @@
-package com.uped.proyecto;
+package com.uped.proyecto.modelo;
 
 
 
@@ -6,60 +6,28 @@ package com.uped.proyecto;
 public class Main {
     static void main(String[] args) {
 
-        Cliente cliente = new Cliente(
-                "Ana López",
-                "04512378-9",
-                "7777-1234"
-        );
-
-        System.out.println(cliente.presentarse());
-
-        Empleado empleado = new Empleado(
-                "Luis Pérez",
-                "06223456-1",
-                850.0
-        );
-
-        System.out.println(empleado.presentarse());
-
-        empleado.actualizarNombre("Luis Pérez Martínez");
-        System.out.println(empleado.presentarse());
-
-        Estudiante estudiante = new Estudiante(
-                "Carlos Ramírez",
-                "06123456-7",
-                "UPED-2026-045",
-                "Ing. en Sistemas"
-        );
-
-        System.out.println(estudiante);
-        estudiante.matricular("Programación III");
-
-        Visitante visitante = new Visitante("Kevin");
-        System.out.println(visitante);
-
-        Docente docente = new Docente(
-                "María Hernández",
-                "05987654-3",
-                "Ingeniería de Software",
-                8
-        );
-
-        System.out.println(docente);
-        docente.impartirClase("Programación III");
+        System.out.println("=== PRUEBA DE UPCASTING Y BUCLE POLIMÓRFICO ===");
 
         Persona[] personas = {
-                cliente,
-                empleado,
-                estudiante,
-                docente
+                new Cliente("Ana", "04512378-9", "7777-1111", 4000.0),
+                new Empleado("Luis", "06223344-5", 850.0),
+                new Estudiante("Kevin", "03998877-1", "UPED-045", "Ing. Sistemas", 9.1),
+                new Docente("Marta", "01122334-4", "Bases de Datos", 5)
         };
 
-        for (Persona persona : personas) {
-            System.out.println(persona.presentarse());
+        for (Persona p : personas) {
+            System.out.println(p.presentarse() + " -> $" + p.calcularBeneficioAnual());
         }
 
-        System.out.println("Ejercicio 8.1:");
+        System.out.println("\n=== PRUEBA EJEMPLO INTEGRADOR (VOLUNTARIO) ===");
+        Voluntario v = new Voluntario("Sara Gómez", "07456123-2", 120.0);
+        System.out.println(v);
+        System.out.println("Beneficio: " + v.calcularBeneficioAnual());
+
+        System.out.println("\n=== PRUEBA EJERCICIO PRÁCTICO 1 (PROVEEDOR) ===");
+        Proveedor prov = new Proveedor("Comercial Ríos", "06554321-8", 8000.0);
+        System.out.println(prov);
+        System.out.println("Beneficio: " + prov.calcularBeneficioAnual());
 
     }
 
