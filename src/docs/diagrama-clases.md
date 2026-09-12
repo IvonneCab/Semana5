@@ -45,6 +45,16 @@ classDiagram
         +calcularBeneficioAnual() double
         +toString() String
     }
+    
+    class Gerente {
+        -int tamanoEquipo
+        +calcularBeneficioAnual() double
+    }
+
+    class DocenteInvestigador {
+        -int numeroPublicaciones
+        +calcularBeneficioAnual() double
+    }
 
     Persona <|-- Cliente
     Persona <|-- Empleado
@@ -52,3 +62,5 @@ classDiagram
     Persona <|-- Docente
     Persona <|-- Voluntario
     Persona <|-- Proveedor
+Empleado <|-- Gerente
+    Docente <|-- DocenteInvestigador
