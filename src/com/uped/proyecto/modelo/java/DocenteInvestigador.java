@@ -1,7 +1,10 @@
 
 
 package com.uped.proyecto.modelo;
+
 public class DocenteInvestigador extends Docente {
+
+    private int numeroPublicaciones;
 
     public DocenteInvestigador(String nombre, String dui, String especialidad, int aniosExperiencia, int numeroPublicaciones) {
         super(nombre, dui, especialidad, aniosExperiencia);
