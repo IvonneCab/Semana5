@@ -1,22 +1,13 @@
 package com.uped.proyecto.modelo;
 
-
-
-
 public class Main {
     static void main(String[] args) {
 
-        System.out.println("--- PRUEBA EJEMPLO GUIADO: GERENTE ---");
-        Gerente g = new Gerente("Marta Díaz", "05123456-7", 1200.0, 5);
-        System.out.println(g);
-        System.out.println("Beneficio: " + g.calcularBeneficioAnual());
+        Empleado emp = new Empleado("Carlos Pérez", "12345678-9", 600.0);
 
-        System.out.println("\n--- PRUEBA EJERCICIO 8.2: DOCENTE INVESTIGADOR ---");
-        DocenteInvestigador di = new DocenteInvestigador(
-                "Dr. Iván Reyes", "07321456-9",
-                "Ingeniería de Software", 8, 4);
-        System.out.println(di);
-        System.out.println("Beneficio: " + di.calcularBeneficioAnual());
+        System.out.println("Beneficio normal (10%): $" + emp.calcularBeneficioAnual());
+
+        System.out.println("Beneficio con extra del 5%: $" + emp.calcularBeneficioAnual(0.05));
 
     }
 
