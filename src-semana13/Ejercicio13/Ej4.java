@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicio13;
 
 public class Ej4 {
     static int promedio(int[] notas) {

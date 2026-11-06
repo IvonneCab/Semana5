@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicio;
 
 public class Ej2 {
     static String ver(int x) {

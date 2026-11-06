@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicio;
 
 import biblioteca.Material;
 import biblioteca.Prestable;

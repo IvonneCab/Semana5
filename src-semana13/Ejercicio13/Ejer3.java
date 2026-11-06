@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicio13;
 
 public class Ejer3 {
     static int nivel3(int d) {

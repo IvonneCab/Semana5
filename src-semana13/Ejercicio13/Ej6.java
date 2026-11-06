@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicio13;
 
 public class Ej6 {
     static int convertir(String txt) {

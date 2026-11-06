@@ -1,4 +1,4 @@
-package Ejercicios.Ej4;
+package Ejercicio.Ej4;
 
 public class Proyecto implements Calificable {
     private int nota;
